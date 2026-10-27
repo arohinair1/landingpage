@@ -29,10 +29,13 @@ $('coursework').append(early);
 $('reading-title').textContent = personal.book.title;
 $('reading-author').textContent = personal.book.author;
 $('trip-title').textContent = personal.trip.title;
-const tripImage = $('trip-image');
-tripImage.src = personal.trip.image;
-tripImage.alt = personal.trip.alt;
-tripImage.width = personal.trip.width;
-tripImage.height = personal.trip.height;
+$('trip-caption').textContent = personal.trip.caption;
+for (const photo of personal.trip.photos) {
+  const image = $(photo.id);
+  image.src = photo.image;
+  image.alt = photo.alt;
+  image.width = photo.width;
+  image.height = photo.height;
+}
 $('product-description').textContent = building.description;
 $('product-progress').textContent = building.progress;

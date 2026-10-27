@@ -177,8 +177,16 @@ export const earlyCourses = [
 // Update these entries when the current book, trip, or product description changes.
 export const personal = {
   book: { title: 'Notes from Underground', author: 'Fyodor Dostoevsky' },
-  trip: { title: 'Guatemala', image: 'images/guatemala-volcano.jpeg', width: 360, height: 638,
-    alt: 'A volcano erupting at night in Guatemala, with glowing red lava above a dark mountain silhouette.' }
+  trip: {
+    title: 'Guatemala',
+    caption: 'Guatemala — volcanoes by day and night.',
+    photos: [
+      { id: 'trip-day', image: 'images/guatemala-day.jpg', width: 917, height: 1200,
+        alt: 'A smoking volcano in Guatemala beneath a cloudy daytime sky, framed by pine trees.' },
+      { id: 'trip-night', image: 'images/guatemala-night.jpg', width: 828, height: 1800,
+        alt: 'Glowing lava spilling down a volcano in Guatemala during a nighttime eruption, with a plume above the summit.' }
+    ]
+  }
 };
 export const building = {
   description: 'A marketplace for parking and storage near college campuses, connecting people looking for space with residents who have an unused driveway, garage, or storage area. The product is designed around semester parking, summer storage, and campus events.',
