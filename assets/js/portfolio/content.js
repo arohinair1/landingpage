@@ -26,7 +26,7 @@ export const projects = [
   },
   {
     "url": "https://drive.google.com/file/d/1wLIxhnfKUJx_B0DmNIU7WvP6aZkkk1wW/view?usp=sharing",
-    "title": "A Computational Approach to the Binding of Per- and Polyfluoroalkyl Substances to the PPARy Protein Receptor",
+    "title": "A Computational Approach to the Binding of Per- and Polyfluoroalkyl Substances to the PPARγ Protein Receptor",
     "tag": "Computational chemistry",
     "heading": "Following pollutants to the molecular level.",
     "description": "Investigating PFAS binding to the PPARγ receptor at Michigan State’s Wilson Lab.",
