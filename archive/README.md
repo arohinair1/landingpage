@@ -1,29 +1,23 @@
-# Original website archive
+# Original website preservation
 
-`legacy-site/` contains the original version of Arohi Nair’s personal website, preserved before the October 2026 redesign. It was copied directly from commit `371e770fa7a5fa41cc9315b6eaf338368078abbb` (September 12, 2026), also identified by the `pre-redesign` Git tag.
+The original website from before the October 2026 redesign is preserved in Git history by the `pre-redesign` tag, pointing to commit `371e770fa7a5fa41cc9315b6eaf338368078abbb`. The tag exists on GitHub. It contains the complete original HTML, CSS, JavaScript, images, fonts, Sass sources, and original domain file.
 
-## View locally
+The original site is intentionally not hosted. There is no `archive/legacy-site/` directory in the current website.
 
-From the repository root:
-
-```sh
-python3 -m http.server 8000 --bind 127.0.0.1
-```
-
-Open http://localhost:8000/archive/legacy-site/ for the original site, or http://localhost:8000/ for the redesign. If a server is already running on that port, use it.
-
-To serve only the archive independently:
+To recover the original files into a separate local directory without changing the current checkout:
 
 ```sh
-python3 -m http.server 8001 --bind 127.0.0.1 --directory archive/legacy-site
+git fetch origin tag pre-redesign
+mkdir -p ../landingpage-original
+git archive pre-redesign | tar -x -C ../landingpage-original
 ```
 
-Open http://localhost:8001/. The HTML files can also be opened directly, though HTTP preview is recommended.
+To view the recovered copy locally:
 
-## Preservation details
+```sh
+python3 -m http.server 8001 --bind 127.0.0.1 --directory ../landingpage-original
+```
 
-All original tracked HTML, styles, JavaScript, images, fonts, Sass sources, license, and README files are included. The original design and markup are retained. The only HTML change makes the favicon path relative (`images/icon.png`) so it works from this subdirectory or when served independently.
+Open http://localhost:8001/. Do not publish the recovered copy or copy its CNAME into another hosted archive. No history was rewritten, and the preservation tag must not be deleted or moved.
 
-The original `CNAME` is intentionally omitted here. The root `CNAME` remains unchanged and applies to the redesigned site. No deployment configuration was changed. Existing external report/contact destinations are preserved; their availability remains controlled by those external services. The legacy Google Fonts request still needs an internet connection.
-
-The tag preserves the exact original Git tree, including its original `CNAME`; the directory provides a browsable archival copy. Run `python3 tests/check_legacy_archive.py` to compare every archived file against the tagged source, allowing only the documented favicon adjustment and CNAME omission.
+Run `python3 tests/check_preservation.py` to verify the tag and recoverability, confirm root CNAME is unchanged, and ensure no legacy HTML remains in the current site.

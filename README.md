@@ -20,7 +20,7 @@ Open http://localhost:8000/ and refresh after edits. Stop with Ctrl+C.
 - `assets/js/portfolio/angle-core.mjs`: programmatic geometry, generation, validation, and scoring.
 - `assets/js/portfolio/angle-game.js`: Arc game UI and session state.
 
-Checks: `node tests/angle.test.mjs`.
+Checks: `node tests/angle.test.mjs`, `node tests/angle-ui.test.mjs`, and `python3 tests/check_preservation.py`.
 
 ## Arc
 
@@ -34,9 +34,9 @@ The numeric angle is not included in the diagram's accessible description until 
 
 The MSU early coursework contains individual course grades on the transcript's numeric scale. No private transcript or résumé file is included. The CS & Economics thesis uses only the owner-approved high-level description; no proposal, internal notes, results, or private implementation materials are included.
 
-All six original project links are retained. External destination availability can depend on permissions. Legacy template pages and assets are retained; the homepage does not load their jQuery or CSS.
+All six original project links are retained. External destination availability can depend on permissions. Unused legacy template pages, scripts, styles, and images have been removed from the current site; their complete originals remain in the preservation tag.
 
-Keep work local on `feat/portfolio-redesign`. No push, merge, deployment, or CNAME/DNS/Pages changes without explicit approval.
+Prepare changes locally on `fix/post-deployment-audit`. No push, merge, deployment, or CNAME/DNS/Pages changes without explicit approval.
 
 ## Personal and product updates
 
@@ -46,6 +46,6 @@ College Space is deliberately not linked: the repository is private, and the sup
 
 Relevant past coursework appears in collapsed details; current coursework is omitted. Older projects have `displayTitle` for the summary while preserving `title` as the full formal title inside the expanded panel. Thesis illustrations are original conceptual diagrams, not research figures or evidence of results.
 
-## Original website archive
+## Original website preservation
 
-The complete pre-redesign site is preserved under `archive/legacy-site/`. See [archive instructions](archive/README.md) for provenance and independent preview commands. The `pre-redesign` tag points to the exact original commit; only the root site has a CNAME.
+The original site is preserved only in Git history through the `pre-redesign` tag at `371e770fa7a5fa41cc9315b6eaf338368078abbb`. It is not hosted at a second website URL. See [recovery instructions](archive/README.md). Run `python3 tests/check_preservation.py` to verify recoverability.
