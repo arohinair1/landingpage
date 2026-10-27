@@ -1,163 +1,166 @@
-<!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Arohi Nair</title>
-		<link rel="icon" type="image/x-icon" href="/images/icon.png">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="landing is-preload">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Arohi Nair — Research & Projects</title>
+<meta name="description" content="Arohi Nair studies Computer Science & Economics and Applied Mathematics at Yale. Field notes on machine learning, computational chemistry, markets, and games.">
+<meta property="og:title" content="Arohi Nair — Field Notes">
+<meta property="og:description" content="Machine learning, computational chemistry, and quantitative finance. Research, projects, and an angle game.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arohinair.com/">
+<meta property="og:image" content="https://arohinair.com/images/arohi.png">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#f5f2ea">
+<link rel="icon" href="images/icon.png">
+<link rel="stylesheet" href="assets/css/portfolio/style.css">
+<script type="module" src="assets/js/portfolio/site.js">
+</script>
+</head>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><a class="wordmark" href="#">an<span>·</span></a><span class="edition">FIELD NOTES</span>
+<nav aria-label="Main navigation"><a href="#research">Research</a><a href="#work">Work</a><a href="#notes">Outside of Work</a><a href="mailto:arohi.nair@yale.edu">Say hello ↗</a>
+</nav>
+</header>
+<main id="main">
+<section class="hero">
+<div class="intro">
+<p class="eyebrow"><span class="dot"></span> YALE UNIVERSITY ’27</p>
+<h1>Arohi Nair<span class="serif-dot">.</span></h1>
+<p class="intro-copy">I’m interested in machine learning, computational chemistry, econometrics, and quantitative finance.</p>
+<p class="bio">I study Computer Science & Economics and Applied Mathematics at Yale. Currently, I’m a research assistant in the Regina Barzilay Group at MIT CSAIL.</p><a class="text-link" href="#research">Explore my research <span>↓</span></a>
+<div class="hero-foot"><span>COMPUTER SCIENCE · ECONOMICS · APPLIED MATH</span><span>NEW HAVEN, CT</span>
+</div>
+</div>
+<aside class="game angle-game" aria-labelledby="game-title">
+<div class="game-title-row"><h2 id="game-title">Arc.</h2><span class="mono">UNLIMITED PLAY</span></div>
+<p class="game-deck">How good is your eye for angles?</p>
+<svg id="angle-diagram" viewBox="0 0 320 230" role="img" aria-labelledby="angle-title angle-description">
+<title id="angle-title">Estimate the marked angle</title>
+<desc id="angle-description">Two rays meet at a vertex. Estimate the angle traced clockwise by the burgundy arc, which may be greater than 180 degrees.</desc>
+<defs><marker id="arc-arrow" markerWidth="5" markerHeight="5" refX="3" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5" fill="currentColor"/></marker></defs>
+<circle class="angle-guide" cx="160" cy="115" r="92"/>
+<path id="angle-sector" class="angle-sector"/>
+<path id="angle-rays" class="angle-rays"/>
+<path id="guess-ray" class="guess-ray" hidden/>
+<path id="angle-arc" class="angle-arc" marker-end="url(#arc-arrow)"/>
+<circle class="angle-vertex" cx="160" cy="115" r="3"/>
+<text id="angle-label" class="angle-label" text-anchor="middle" dominant-baseline="middle">?</text>
+</svg>
+<form id="guess-form" novalidate>
+<label for="guess">Your estimate <span>degrees</span></label>
+<div class="input-line"><input id="guess" name="guess" type="text" inputmode="numeric" autocomplete="off" placeholder="1–359" aria-describedby="input-help game-error"><button type="submit" id="submit-guess">Guess ↗</button></div>
+<p id="input-help">Follow the marked arc clockwise. Whole degrees, 1–359.</p>
+<p id="game-error" role="alert"></p>
+</form>
+<div id="result" hidden role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></div>
+<button id="next-angle" class="next-angle" hidden>Next angle ↗</button>
+<div class="game-bottom"><span id="round-label">ROUND 1</span><span id="session-score">0 points · 0 played</span></div>
+<details class="rules"><summary>How to play</summary>
+<p>Estimate the angle between the two rays, following the burgundy arc clockwise. The marked angle can be anything from 1° to 359°, including angles larger than a half-turn.</p>
+<p>You get one guess per round. The answer appears immediately, with your estimate drawn as a dashed ray. Earn up to 100 points: 100 for an exact guess, losing points linearly with absolute error, down to 0 at 180° off. Your score runs for this page session. Play as many rounds as you like.</p>
+<p>Inspired by <a href="https://angledle.com/">Angledle</a>. Independently written, with original styling and an immediate-reveal format rather than its six-guess daily puzzle.</p>
+</details>
+<noscript><p>Enable JavaScript to play the angle game.</p></noscript>
+</aside>
+</section>
+<div class="section-divider"><span>MODELS / MOLECULES / MARKETS</span><span>RESEARCH & SELECTED PROJECTS</span>
+</div>
+<section id="research" class="section">
+<div class="section-head">
+<div>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<h2>Research<span class="serif-dot">.</span></h2>
+</div>
+<p>Ongoing research and senior theses.</p>
+</div>
+<div class="research-layout">
+<article class="research-feature"><span class="status">ONGOING RESEARCH</span>
+<div class="molecule" aria-hidden="true"><svg viewBox="0 0 300 150"><g fill="none" stroke="currentColor" stroke-width="1"><path d="M35 95L90 40L160 65L215 25L268 85L208 124L160 65L119 122L35 95M90 40L119 122M208 124L268 85"/></g><g fill="currentColor"><circle cx="35" cy="95" r="5"/><circle cx="90" cy="40" r="8"/><circle cx="160" cy="65" r="11"/><circle cx="215" cy="25" r="5"/><circle cx="268" cy="85" r="8"/><circle cx="208" cy="124" r="5"/><circle cx="119" cy="122" r="7"/></g></svg><span>STRUCTURE ↔ PREDICTION</span>
+</div>
+<p class="eyebrow">REGINA BARZILAY GROUP · MIT CSAIL</p>
+<h3>Molecular structure prediction</h3>
+<p>Molecular structure prediction brings together computational chemistry and machine learning. This research benchmarks generative and co-folding models, evaluates predicted structures, and investigates BoltzGen’s input-order invariance.</p>
+<p class="caption">Research Assistant / May 2026–present</p>
+</article>
+<div class="theses">
+<article class="poker-thesis"><div class="thesis-top"><span class="status">THESIS / IN PROGRESS</span><svg class="poker-sketch" viewBox="0 0 92 64" aria-hidden="true"><g fill="var(--paper)" stroke="currentColor"><rect x="16" y="9" width="35" height="46" rx="3" transform="rotate(-12 33 32)"/><rect x="42" y="9" width="35" height="46" rx="3" transform="rotate(9 59 32)"/></g><g fill="currentColor" font-family="Georgia" font-size="20"><text x="23" y="38">♠</text><text x="49" y="38">♡</text></g></svg></div>
+<p class="eyebrow">APPLIED MATHEMATICS SENIOR THESIS</p>
+<h3>Rating models for heads-up poker</h3>
+<p>Can margin of victory improve predictions of future heads-up poker outcomes? This thesis compares Elo-style models that incorporate winning margins with standard win/loss-based ratings.</p><span class="caption">Heads-up no-limit poker · Rating models · Predictive evaluation</span>
+</article>
+<article class="vision-thesis"><span class="status">THESIS / IN PROGRESS</span>
+<p class="eyebrow">COMPUTER SCIENCE & ECONOMICS SENIOR THESIS</p>
+<h3>Making medical image segmentation more adaptable</h3>
+<p class="lab-label">Yale Vision Laboratory</p>
+<div class="slice-sketch" aria-hidden="true"><svg viewBox="0 0 220 92"><g fill="var(--paper)" stroke="currentColor" stroke-width="1"><rect x="28" y="12" width="78" height="66" rx="3"/><rect x="69" y="12" width="78" height="66" rx="3"/><rect x="110" y="12" width="78" height="66" rx="3"/></g><g fill="currentColor" fill-opacity=".12" stroke="currentColor"><path d="M135 28C118 32 119 58 137 64C158 72 176 53 164 37C155 22 148 38 135 28Z"/></g><path d="M129 48C140 39 153 58 168 45" fill="none" stroke="currentColor" stroke-dasharray="3 3"/></svg><span>Neighboring slices · Conceptual illustration</span></div>
+<p>This thesis explores sequential test-time adaptation for medical image segmentation, asking whether predictions from neighboring image slices can help models adapt to unfamiliar data.</p>
+<p>The approach combines image registration to align predictions between slices with energy-based adaptation to encourage anatomically plausible segmentations. The work examines when adaptation helps, when it doesn’t, and what explains those differences.</p>
+</article>
+</div>
+</div>
+</section>
+<section id="building" class="section building">
+<div class="section-head"><h2>Currently Building<span class="serif-dot">.</span></h2></div>
+<article class="product-feature"><div class="product-copy"><span class="status">IN DEVELOPMENT</span><h3>College Space</h3><p id="product-description"></p><p class="product-progress" id="product-progress"></p><span class="caption">APPLICATION / MARKETPLACE</span></div><figure class="product-preview"><div class="preview-bar"><span aria-hidden="true">○ ○ ○</span><span>COLLEGE SPACE / DEVELOPMENT PREVIEW</span></div><img src="images/college-space-preview.png" width="1200" height="900" loading="lazy" decoding="async" alt="College Space development homepage showing its campus parking and storage search interface beside a residential street photograph."><figcaption>Actual development preview · Demo content</figcaption></figure></article>
+</section>
+<section id="work" class="section">
+<div class="section-head">
+<div>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Arohi Nair</a></h1>
-						<nav id="nav">
-<!--							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Generic</a></li>
-											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
-										</ul>
--->
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+<h2>Selected Projects<span class="serif-dot">.</span></h2>
+</div>
+<p>Machine learning, chemistry, and cybersecurity. 2021–2025</p>
+</div>
+<div id="projects">
+</div>
+<noscript>
+<p>Project reports: <a href="https://drive.google.com/file/d/1Wr8ltrmApgyOrST3zG9oKPdnaNEM8PO9/view?usp=sharing">Detecting Humor in Reddit Text Using Neural Language Models</a><br><a href="https://drive.google.com/file/d/1zNtNSzDVQNmKI7AEqlPDX3rV4axEOpP8/view?usp=sharing">Unsupervised Anomaly Detection in ECG Images Using Autoencoders and Clustering Techniques</a><br><a href="https://drive.google.com/file/d/1Dq27lzqYNpdxVoeomHyTjPgEkxxmA5T8/view?usp=sharing">Proficiency of Axonius Asset Management System and Gap Analysis Report</a><br><a href="https://drive.google.com/file/d/1wLIxhnfKUJx_B0DmNIU7WvP6aZkkk1wW/view?usp=sharing">A Computational Approach to the Binding of Per- and Polyfluoroalkyl Substances to the PPARy Protein Receptor</a><br><a href="https://drive.google.com/file/d/1Lqa4hu4i3s9NxEt40TW0qE4lBDSlQxC9/view?usp=sharing">Radiomic Classification of Chest Radiographs - Identifying COVID-19, Viral Pneumonia, and Healthy Patients to Alleviate Hospital Congestion</a><br><a href="https://drive.google.com/file/d/1l4mQQD1WjiYHUDCUsmpwQBsFykpNkFe8/view?usp=sharing">Identifying Chest Radiographs Without Pathology Using a Convolutional Neural Network</a><br>
+</p>
+</noscript>
+</section>
+<section id="experience" class="section experience">
+<div class="section-head">
+<div>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>Arohi Nair</h2>
-							<p>Yale University '27<br />
-							B.S. Computer Science & Economics, Applied Mathematics<br />
-							</p>
-						</div>
-						<a href="#one" class="more scrolly">Learn More</a>
-					</section>
+<h2>Experience<span class="serif-dot">.</span></h2>
+</div>
+<p>Industry, public service, and research.</p>
+</div>
+<div id="experience-list">
+</div>
+</section>
+<section id="education" class="section education">
+<div>
+<p class="eyebrow">EDUCATION</p>
+<h2>Yale University<span class="serif-dot">.</span>
+</h2>
+<p class="degree">B.S. Computer Science & Economics<br>B.S. Applied Mathematics</p>
+<p class="caption">Class of 2027</p>
+</div>
+<div>
+<p class="eyebrow">RELEVANT PAST COURSEWORK</p>
+<div id="coursework">
+</div>
+</div>
+</section>
+<section id="notes" class="section personal">
+<div class="personal-intro">
 
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Projects and Research</h2>
-								<p>Below is a collection of project and research endeavors I have engaged in.<br />
-								Important milestones and deliverables for each project are linked.</p>
-							</header>
-							
-							<ul class="features">
-								<li class="icon solid fa-code">
-									<h3><a href="https://drive.google.com/file/d/1Wr8ltrmApgyOrST3zG9oKPdnaNEM8PO9/view?usp=sharing">Detecting Humor in Reddit Text Using Neural Language Models</a></h3>
-									<p>December 2025</p>
-									<p>The central research question of this project is: How effectively can modern neural language models like Distil-BERT detect humor in real-world Reddit data compared to traditional classifiers such as Naive Bayes and Logistic Regression? To address this, we systematically compare traditional baselines of Multinomial Naive Bayes and Logistic Regression trained on TF-IDF features with a neural model in the form of a fine-tuned DistilBERT classifier that leverages contextualized embeddings.</p>
-								</li>
-								<li class="icon solid fa-laptop">
-									<h3><a href="https://drive.google.com/file/d/1zNtNSzDVQNmKI7AEqlPDX3rV4axEOpP8/view?usp=sharing">Unsupervised Anomaly Detection in ECG Images Using Autoencoders and Clustering Techniques</a></h3>
-									<p>May 2025</p>
-									<p>This research was inspired by the need for efficient detection of cardiac abnormalities from ECG images. We aimed to develop a model that learns normal and abnormal patterns from ECGs in an unsupervised way, using autoencoders and clustering.</p>
-								</li>
-								<li class="icon solid fa-lock">
-									<h3><a href="https://drive.google.com/file/d/1Dq27lzqYNpdxVoeomHyTjPgEkxxmA5T8/view?usp=sharing">Proficiency of Axonius Asset Management System and Gap Analysis Report</a></h3>
-									<p>July 2024</p>
-									<p>Internship Capstone Project - Cybersecurity Intern at the U.S. Department of Homeland Security Office of the Chief Information Officer at FEMA. </p>
-									<p>I was assessing the Axonius Asset Management tool and determining whether it fits the DHS's risk management and cybersecurity goals, as well as offers effective asset management services.</p>
-								</li>
-								<li class="icon solid fa-flask">
-									<h3><a href="https://drive.google.com/file/d/1wLIxhnfKUJx_B0DmNIU7WvP6aZkkk1wW/view?usp=sharing">A Computational Approach to the Binding of Per- and Polyfluoroalkyl Substances to the PPARy Protein Receptor</a></h3>
-									<p>May 2023</p>
-									<p>The project I engaged in during my time interning at the Wilson Lab at Michigan State University, where I investigated the impact of PFAS pollutants on specified receptors in the human body.</p>
-								</li>
-								<li class="icon solid fa-stethoscope">
-									<h3><a href="https://drive.google.com/file/d/1Lqa4hu4i3s9NxEt40TW0qE4lBDSlQxC9/view?usp=sharing">Radiomic Classification of Chest Radiographs - Identifying COVID-19, Viral Pneumonia, and Healthy Patients to Alleviate Hospital Congestion</a></h3>
-									<p>May 2022</p>
-									<p>A project I engaged in following the COVID-19 pandemic, which aimed to help with hospital triaging and the strain on hospital resources that resulted from increased overcrowding.</p>
-								</li>
-								<li class="icon solid fa-x-ray">
-									<h3><a href="https://drive.google.com/file/d/1l4mQQD1WjiYHUDCUsmpwQBsFykpNkFe8/view?usp=sharing">Identifying Chest Radiographs Without Pathology Using a Convolutional Neural Network</a></h3>
-									<p>May 2021</p>
-									<p>A project that aimed to automate the identification process of chest radiographs, thereby decreasing the amount of time, money, and resources associated with these readings and allowing for reallocation of resources.</p>
-								</li>
-							</ul>
-						</div>
-					</section>
-				
-				<!-- Two -->
-				<section id="two" class="wrapper style2 special">
-					<div class="inner">
-						<header class="major">
-							<h2>About</h2>
-	
-							<p>Hello! I’m Arohi Nair, currently a student at Yale University pursuing a <br />
-								BS in Computer Science & Economics and Applied Mathematics. My academic journey, complemented by <br />
-								diverse work experiences and extracurricular activities, fuels my passion in exploring <br />
-								business, finance, and research in a quantitative, analytical way. In my free time, you can <br />
-								find me running, reading, or baking. </p>
-								
-						</header>
-					</div>
-				</section>
+<h2>Outside of Work<span class="serif-dot">.</span></h2>
 
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>Reach Out!</h2>
-								<p>I am always open to new opportunities, <br />
-									and would love to connect.</p>
-							</header>
-							<ul class="actions stacked">
-								<li><a href="https://www.linkedin.com/in/arohi-nair/" class="button fit primary">LinkedIn</a></li>
-								<li><a href="https://drive.google.com/file/d/1hS2lQKfcAY86c2v9pFfkonXBX6f7XTFS/view?usp=sharing" class="button fit">Resume</a></li>
-								
-							</ul>
-						</div>
-					</section>
+</div>
+<p class="personal-description">When I'm not working, I enjoy reading, running, traveling, baking, and playing puzzle games like sudoku, Krillion, NYT games, and poker.</p>
+<div class="personal-editorial"><article class="reading-feature"><p class="eyebrow">CURRENTLY READING</p><div class="reading-title"><span class="book-rule" aria-hidden="true"></span><h3 id="reading-title"></h3><p id="reading-author"></p></div></article><figure class="trip-feature"><div class="trip-heading"><p class="eyebrow">LATEST TRIP</p><h3 id="trip-title"></h3></div><img id="trip-image" src="images/guatemala-volcano.jpeg" width="360" height="638" loading="lazy" decoding="async" alt="A volcano erupting at night in Guatemala, with glowing red lava above a dark mountain silhouette."><figcaption>Photograph by Arohi Nair</figcaption></figure></div>
+</section>
+<footer id="contact">
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="https://www.instagram.com/arohinair/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://www.linkedin.com/in/arohi-nair/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="mailto:arohi.nair@yale.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Arohi Nair 2026</li>
-						</ul>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+<div class="footer-main"><a href="mailto:arohi.nair@yale.edu">Get in touch<span class="serif-dot">.</span> ↗</a><span>arohi.nair@yale.edu</span>
+</div>
+<div class="footer-bottom"><span>© AROHI NAIR 2026</span>
+<div><a href="https://www.linkedin.com/in/arohi-nair/">LinkedIn ↗</a><a href="https://drive.google.com/file/d/1hS2lQKfcAY86c2v9pFfkonXBX6f7XTFS/view?usp=sharing">Résumé ↗</a><a href="https://www.instagram.com/arohinair/">Instagram ↗</a><a href="#">Back to top ↑</a>
+</div>
+</div>
+</footer>
+</main>
+</body>
 </html>
-
-
-
-
-
-
-
-
