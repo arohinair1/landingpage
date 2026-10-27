@@ -21,7 +21,7 @@ function newRound() {
   byId('angle-label').setAttribute('y', label.y);
   byId('angle-label').textContent = '?';
   byId('guess-ray').setAttribute('hidden', '');
-  byId('angle-description').textContent = 'Two rays meet at a vertex. Estimate the angle traced clockwise by the burgundy arc, which may be greater than 180 degrees.';
+  byId('angle-description').textContent = 'Two rays meet at a vertex. Estimate the angle traced clockwise by the marked arc, which may be greater than 180 degrees.';
   byId('guess-form').hidden = false;
   byId('guess').value = '';
   byId('game-error').textContent = '';
